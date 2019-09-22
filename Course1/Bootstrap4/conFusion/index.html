@@ -64,9 +64,73 @@
               >
             </li>
           </ul>
+          <span class="navbar-text">
+            <a data-toggle="modal" data-target="#loginModal">
+              <span class="fa fa-sign-in"></span> Login
+            </a>
+          </span>
         </div>
       </div>
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-sm-4">
+                  <label class="sr-only" for="exampleInputEmail3"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control form-control-sm mr-1"
+                    id="exampleInputEmail3"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="sr-only" for="exampleInputPassword3"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control form-control-sm mr-1"
+                    id="exampleInputPassword3"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="col-sm-auto">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" />
+                    <label class="form-check-label"> Remember me </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm ml-auto"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="btn btn-primary btn-sm ml-1">
+                  Sign in
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <header class="jumbotron">
       <div class="container">
         <div class="row row-header">
@@ -83,7 +147,13 @@
           </div>
           <div class="col-12 col-sm align-self-center">
             <button class="btn bg-warning">
-              <a href="#testform" class="btn btn-block btn-warning"
+              <a
+                href="#reserveform"
+                class="btn btn-block btn-warning"
+                data-toggle="tooltip"
+                data-html="true"
+                title="Or Call Us at <br> <stron> +852 12345678</strong>"
+                data-placement="bottom"
                 >Reserve Table</a
               >
             </button>
@@ -174,7 +244,7 @@
           <div class="card">
             <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
             <div class="card-body">
-              <form id="testform">
+              <form id="reserveform">
                 <div class="form-group row">
                   <label for="numguests" class="col-md-2 col-form-label"
                     >Number of Guests</label
@@ -359,5 +429,10 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
   </body>
 </html>
