@@ -21,6 +21,8 @@
   "devDependencies": {
     "cssmin": "^0.4.3",
     "grunt": "^1.0.2",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
     "grunt-sass": "^2.1.0",
     "htmlmin": "0.0.7",
     "jit-grunt": "^0.10.0",
