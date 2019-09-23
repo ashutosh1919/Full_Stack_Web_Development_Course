@@ -13,6 +13,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
   <!-- Bootstrap CSS -->
+  <!--build:css  css/main.css -->
   <link
     rel="stylesheet"
     href="node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -26,6 +27,7 @@
     href="node_modules/bootstrap-social/bootstrap-social.css"
   />
   <link rel="stylesheet" href="css/styles.css" />
+  <!-- endbuild -->
 
   <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
@@ -65,9 +67,7 @@
             </li>
           </ul>
           <span class="navbar-text" id="loginButton">
-            <a>
-              <span class="fa fa-sign-in"></span> Login
-            </a>
+            <a> <span class="fa fa-sign-in"></span> Login </a>
           </span>
         </div>
       </div>
@@ -148,10 +148,7 @@
           </div>
           <div class="col-12 col-sm align-self-center" id="reserveButton">
             <button class="btn bg-warning">
-              <a
-                class="btn btn-block btn-warning"
-                >Reserve Table</a
-              >
+              <a class="btn btn-block btn-warning">Reserve Table</a>
             </button>
           </div>
         </div>
@@ -253,14 +250,27 @@
                   Section
                 </label>
                 <div class="col-sm-6">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-success active">
-                          <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
-                        </label>
-                        <label class="btn btn-danger">
-                          <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
-                        </label>
-                    </div>
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-success active">
+                      <input
+                        type="radio"
+                        name="options"
+                        id="option1"
+                        autocomplete="off"
+                        checked
+                      />
+                      Non-Smoking
+                    </label>
+                    <label class="btn btn-danger">
+                      <input
+                        type="radio"
+                        name="options"
+                        id="option2"
+                        autocomplete="off"
+                      />
+                      Smoking
+                    </label>
+                  </div>
                 </div>
               </div>
               <div class="form-group row">
@@ -394,9 +404,9 @@
             >
               <span class="carousel-control-next-icon"></span>
             </a>
-              <button class="btn btn-danger btn-sm" id="carouselButton">
-                <span class="fa fa-pause"></span>
-              </button>
+            <button class="btn btn-danger btn-sm" id="carouselButton">
+              <span class="fa fa-pause"></span>
+            </button>
           </div>
         </div>
       </div>
@@ -664,9 +674,11 @@
       </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!--build:js js/main.js-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    <!--endbuild-->
   </body>
 </html>
