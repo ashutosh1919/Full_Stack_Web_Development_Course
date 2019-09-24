@@ -30,3 +30,4 @@ $(document).ready(function() {
     $("#loginModal").modal("show");
   });
 });
+//JavaScript File
