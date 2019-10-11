@@ -8,6 +8,8 @@ import {
   CardTitle
 } from "reactstrap";
 
+import DishdetailComponent from "./DishdetailComponent";
+
 class Menu extends Component {
   constructor(props) {
     super(props);
@@ -37,6 +39,37 @@ class Menu extends Component {
     }
   }
 
+  renderComments(dish) {
+    var comments;
+    if (dish != null) {
+      comments = dish.comments;
+    } else {
+      comments = null;
+    }
+    if (comments != null) {
+      const coms = comments.map(com => {
+        return (
+          <div key={com.id}>
+            <div className="row">
+              <p>{com.comment}</p>
+            </div>
+            <div className="row">
+              <p>-- {com.author}</p>
+            </div>
+          </div>
+        );
+      });
+      return (
+        <div className="container">
+          <h4>Comments</h4>
+          <div>{coms}</div>
+        </div>
+      );
+    } else {
+      return <div></div>;
+    }
+  }
+
   render() {
     const menu = this.props.dishes.map(dish => {
       return (
@@ -53,7 +86,16 @@ class Menu extends Component {
     return (
       <div className="container">
         <div className="row">{menu}</div>
-        <div className="row">{this.renderDish(this.state.selectedDish)}</div>
+        <div className="row">
+          <div className="col-12 col-md-5 mt-5">
+            <DishdetailComponent
+              selectedDish={this.state.selectedDish}
+            ></DishdetailComponent>
+          </div>
+          <div className="col-12 col-md-5 mt-5">
+            {this.renderComments(this.state.selectedDish)}
+          </div>
+        </div>
       </div>
     );
   }
