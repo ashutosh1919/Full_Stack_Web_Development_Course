@@ -4,7 +4,7 @@ export const Promotions = (
   state = {
     isLoading: true,
     errMess: null,
-    dishes: []
+    promotions: []
   },
   action
 ) => {
