@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {
   Card,
   CardImg,
-  CardImgOverlay,
   CardText,
   CardBody,
   CardTitle,
@@ -213,7 +212,6 @@ const DishdetailComponent = props => {
       </div>
     );
   } else if (props.dish != null) {
-    var dish = props.selectedDish;
     return (
       <div className="container">
         <div className="row">

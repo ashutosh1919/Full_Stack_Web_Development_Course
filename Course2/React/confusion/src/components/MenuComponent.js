@@ -3,14 +3,11 @@ import {
   Card,
   CardImg,
   CardImgOverlay,
-  CardText,
-  CardBody,
   CardTitle,
   Breadcrumb,
   BreadcrumbItem
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import DishdetailComponent from "./DishdetailComponent";
 import { Loading } from "./LoadingComponent";
 import { baseUrl } from "../shared/baseUrl";
 
