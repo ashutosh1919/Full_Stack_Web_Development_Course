@@ -1,6 +1,6 @@
 import * as ActionTypes from "./ActionTypes";
 
-export const dishes = (
+export const leaders = (
   state = {
     isLoading: true,
     errMess: null,
