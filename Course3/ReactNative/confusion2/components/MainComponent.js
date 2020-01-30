@@ -26,6 +26,7 @@ import {
   fetchPromos,
   fetchLeaders
 } from "../redux/ActionCreators";
+import Reservation from "./ReservationComponent";
 
 const mapStateToProps = state => {
   return {};
@@ -97,6 +98,31 @@ const HomeNavigator = createStackNavigator(
 const ContactNavigator = createStackNavigator(
   {
     ContactUs: { screen: ContactUs }
+  },
+  {
+    navigationOptions: ({ navigation }) => ({
+      headerStyle: {
+        backgroundColor: "#512DA8"
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        color: "#fff"
+      },
+      headerLeft: (
+        <Icon
+          name="menu"
+          size={24}
+          color="white"
+          onPress={() => navigation.toggleDrawer()}
+        />
+      )
+    })
+  }
+);
+
+const ReseravtionNavigator = createStackNavigator(
+  {
+    Reservation: { screen: Reservation }
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -213,6 +239,21 @@ const MainNavigator = createDrawerNavigator(
             name="address-card"
             type="font-awesome"
             size={22}
+            color={tintColor}
+          />
+        )
+      }
+    },
+    Reservation: {
+      screen: ReseravtionNavigator,
+      navigationOptions: {
+        title: "Reserve Table",
+        drawerLabel: "Reserve Table",
+        drawerIcon: ({ tintColor }) => (
+          <Icon
+            name="cutlery"
+            type="font-awesome"
+            size={24}
             color={tintColor}
           />
         )
