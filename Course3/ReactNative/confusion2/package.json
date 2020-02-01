@@ -12,6 +12,7 @@
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
+    "react-native-animatable": "1.2.4",
     "react-native-datepicker": "1.7.2",
     "react-native-elements": "^1.0.0-beta8",
     "react-native-swipeout": "2.3.3",
