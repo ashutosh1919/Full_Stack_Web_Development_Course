@@ -32,7 +32,6 @@ class Menu extends Component {
         </Animatable.View>
       );
     };
-    const stle = 1;
     const { navigate } = this.props.navigation;
 
     if (this.props.dishes.isLoading) {
