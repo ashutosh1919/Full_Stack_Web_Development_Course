@@ -31,7 +31,7 @@
     "htmlmin": "0.0.7",
     "jit-grunt": "^0.10.0",
     "lite-server": "^2.5.4",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "onchange": "^6.1.0",
     "parallelshell": "^3.0.1",
     "time-grunt": "^1.4.0",
